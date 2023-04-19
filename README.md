@@ -28,16 +28,22 @@ I think I generally know what I'm looking out for:
 - Compression
 - Encryption
 
-# Home NAS with TrueNAS Scale
+# Portable External HDD
 
-- Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
-- Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
+I bought a [WD My Passport Ultra](https://www.westerndigital.com/en-ca/products/portable-drives/wd-my-passport-ultra-usb-c-hdd#WDBC3C0010BSL-WESN).
 
-Notes:
-- Streaming R/W
-- R/W IOPS
+This thing was cool at first, but it has a lot of flaws:
+- passively draining all my battery away (don't know why it would even do this)
+- it's supposed to have max bandwidth 5Gbps (625MB/s), but it was actually more like 2Gbps
+- data can't be accessed without the physical drive being plugged in
 
-I built a server with 36TB of HDD storage configured with `raidz1`. With only 3 disks this is all I didn't really have another option.
+Most importantly, I want to have some fun building a NAS.
+# Network Attached Storage (NAS)
+
+- 36TB of HDD storage
+- 1TB NVMe cache 
+- configured with `raidz1` 
+- Running TrueNAS Scale
 
 ## Specifications
 Type | Name | Quantity
@@ -75,3 +81,7 @@ I don't feel too bad about this because apparently it's
 impossible to get affordable 10 GbE boards in Canada. I
 would have to buy a separate network card, which is
 probably unnecessary at this point.
+
+## References for Setup + Inspiration
+- Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
+- Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
