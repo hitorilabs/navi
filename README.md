@@ -20,3 +20,10 @@ I'm not familiar with how to actually evaluate my options.
 
 I'm going to try both eventually, but first I'll be trying
 out the Portable External HDD from Amazon.
+
+I think I generally know what I'm looking out for:
+- Read + Write
+- Bandwidth Limits over USB, Ethernet, etc.
+- Cache Size (if exists)
+- Compression
+- Encryption
