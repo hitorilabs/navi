@@ -30,15 +30,35 @@ I think I generally know what I'm looking out for:
 
 # Home NAS with TrueNAS Scale
 
-Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
-Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
-Setting up a Static IP Address - https://www.youtube.com/watch?v=xUodt6_e5KA
+- Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
+- Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
 
 Notes:
 - Streaming R/W
 - R/W IOPS
 
 I built a server with 36TB of HDD storage configured with `raidz1`. With only 3 disks this is all I didn't really have another option.
+
+## Specifications
+Type | Name | Quantity
+-- | -- | --
+HDD | Seagate IronWolf 12TB NAS Internal Hard Drive HDD | 3
+CPU | Intel i5-11600K | 1
+RAM | Corsair Vengeance LPX 32GB DDR4-3200 | 1
+PSU | Corsair RM750x | 1
+MOBO | MSI MPG Z590 GAMING PLUS ATX LGA1200 | 1
+SSD | Samsung 980 Pro 1 TB M.2-2280 PCIe 4.0 X4 NVME Solid State Drive | 1
+SSD | Samsung 970 EVO Plus 250GB NVMe M.2 Internal SSD (MZ-V7S250/AM) | 2
+CASE | Corsair 7000D AIRFLOW | 1
+COOL | Noctua NH-D15 chromax.black 82.52 CFM CPU Cooler | 1
+
+This is clearly not a budget build, some high-level considerations that were made:
+- Boot from two mirrored `SSD` instead of 1 (bought 2x 250GB, but the rest of drive space is completely wasted)
+- Setup 1TB `SSD` as Cache VDEV
+- 3x `HDD` are enough to run RAIDz1 (ideally, I should have at least 4 to run RAIDz2)
+- `CASE` + `MOBO` has enough space + ports for 6 drives (ridiculously expensive, but I'm most likely going to turn it into a deep learning workstation)
+- `MOBO` supports 2.5GbE LAN (hard to get 10GbE in Canada, can add a network card to support this)
+- `RAM` not a big deal at the moment
 
 ## Future Improvements
 
