@@ -3,12 +3,11 @@
 I'm quite fond of my macbook air - I can't see myself
 interfacing with anything other than a laptop.
 
-If I can acquire some hardware for deep learning before
-the AI safety people start regulating GPUs, I'll most
-likely be interacting with it through SSH.
-
-For that same reason, it's a little more complicated to
+For this reason, it's going to be a bit complicated to
 think about how I'm going to deal with storage.
+
+This is not a budget build guide, we haven't been grinding
+normie work just to park the money in a bank.
 
 # Things to Consider
 
@@ -20,13 +19,6 @@ I'm not familiar with how to actually evaluate my options.
 
 I'm going to try both eventually, but first I'll be trying
 out the Portable External HDD from Amazon.
-
-I think I generally know what I'm looking out for:
-- Read + Write
-- Bandwidth Limits over USB, Ethernet, etc.
-- Cache Size (if exists)
-- Compression
-- Encryption
 
 # Portable External HDD
 
@@ -58,7 +50,7 @@ SSD | Samsung 970 EVO Plus 250GB NVMe M.2 Internal SSD (MZ-V7S250/AM) | 2
 CASE | Corsair 7000D AIRFLOW | 1
 COOL | Noctua NH-D15 chromax.black 82.52 CFM CPU Cooler | 1
 
-This is clearly not a budget build, some high-level considerations that were made:
+This is clearly not a cheap build, some high-level considerations that were made:
 - Boot from two mirrored `SSD` instead of 1 (bought 2x 250GB, but the rest of drive space is completely wasted)
 - Setup 1TB `SSD` as Cache VDEV
 - 3x `HDD` are enough to run RAIDz1 (ideally, I should have at least 4 to run RAIDz2)
@@ -66,22 +58,20 @@ This is clearly not a budget build, some high-level considerations that were mad
 - `MOBO` supports 2.5GbE LAN (hard to get 10GbE in Canada, can add a network card to support this)
 - `RAM` not a big deal at the moment
 
-## Future Improvements
-
-Honestly, I will only ever work out of my macbook air - so
-I want fast file transfers over wifi anywhere at home.
-
 ### Bandwidth over Wi-Fi
 Even though I did consider getting high-bandwidth
-ethernet, I didn't account for packet loss over wifi. I
-thought 2.5 GbE (312.5 MB/s) would be plenty, but over
-wifi I get a quarter of this bandwidth. 
+ethernet, I didn't account for 802.11ax 1.2Gb/s (~150
+MB/s) per stream. I thought 2.5 GbE (312.5 MB/s) would be
+plenty, but over wifi I get a quarter of this bandwidth. 
 
-I don't feel too bad about this because apparently it's
-impossible to get affordable 10 GbE boards in Canada. I
-would have to buy a separate network card, which is
-probably unnecessary at this point.
+I'm most likely going to park a DL workstation next to the
+NAS connected via ethernet network switch.
 
 ## References for Setup + Inspiration
 - Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
 - Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
+
+# TODO
+
+- increase utilization on this machine
+- pull out all the good components and build a DL workstation
