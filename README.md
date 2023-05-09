@@ -9,6 +9,37 @@ _Mom: no, we have navi at home_
 
 ![serialexperimentslain1](https://github.com/hitorilabs/navi/assets/131238467/fbb66c0e-b6b3-4eb8-b9c4-365544ef1b72)
 
+# Build Log
+
+#### 2023/05/08
+
+Built and setup the the workstation over the weekend. For the record, I've never owned a GPU before and my only interaction with linux distros is through docker images on the cloud.
+  - can I still say arch btw if I used `archinstall`...
+  - moved all the overkill components from NAS to DL workstation
+  - never touched networking before, so this was an
+  enlightening experience
+#### 2023/05/01
+
+I should just buy the machine already, I'm not completely broke. Looking through local marketplaces for honest people selling used 3090. Doing my research on all things hardware.
+#### 2023/04/20
+I have more than enough storage to dump everything I see in the foreseeable future, but no compute to make any of this productive. There are lots of gains to be made with solid networking and storage, but cloud computing platforms often don't offer much control there. I want to do a mix of inference and training, but none of the options make sense for me.
+  - Lambda Labs never has any capacity available when I need it
+    - For an A100, it costs `1.10 * 24 * 365 = 9636` to run an  inference server 24/7
+    - For an A10 it still costs `0.6 * 24 * 365 = 5256`, but it's not even as good as an RTX 3090
+  - Google colab is [doing some whack stuff](https://twitter.com/thechrisperry/status/1649189902079381505)
+    - For a V100 expect `5.45 * 0.14 = 0.76` per hour, which is laughable compared to what you get with A10s.
+    - For an A100 expect `15 * 0.14 = 2.1` per hour, which is double Lambda Labs pricing. 
+
+#### 2023/04/14
+
+Finished building and setting up TrueNAS Scale over the weekend. Honestly, not super impressed with it. 
+  - RAID storage is a psyop
+  - Could've just invested in a bunch of NVMe drives and deal with extra storage when the time actually comes.
+#### 2023/04/10
+
+Waiting 2 hours for a dataset to finish downloading over wifi, 5 mins for every model to download over the internet... this is the last time I will suffer. 
+  - Ordered a bunch of parts and HDDs from Amazon to build a NAS (one-day shipping and scheduled pickup for returns feel illegal)
+
 # Storage
 
 I'm quite fond of my macbook air - I can't see myself
