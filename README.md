@@ -20,7 +20,7 @@ think about how I'm going to deal with storage.
 This is not a budget build guide, we haven't been grinding
 normie work just to park the money in a bank.
 
-# Things to Consider
+## Things to Consider
 
 It's a little embarrassing that I code for a living, but
 I'm not familiar with how to actually evaluate my options.
@@ -31,7 +31,7 @@ I'm not familiar with how to actually evaluate my options.
 I'm going to try both eventually, but first I'll be trying
 out the Portable External HDD from Amazon.
 
-# Portable External HDD
+## Portable External HDD
 
 I bought a [WD My Passport Ultra](https://www.westerndigital.com/en-ca/products/portable-drives/wd-my-passport-ultra-usb-c-hdd#WDBC3C0010BSL-WESN).
 
@@ -41,14 +41,14 @@ This thing was cool at first, but it has a lot of flaws:
 - data can't be accessed without the physical drive being plugged in
 
 Most importantly, I want to have some fun building a NAS.
-# Network Attached Storage (NAS)
+## Network Attached Storage (NAS)
 
 - 36TB of HDD storage
 - 1TB NVMe cache 
 - configured with `raidz1` 
 - Running TrueNAS Scale
 
-## Specifications
+### Specifications
 Type | Name | Quantity | Price
 -- | -- | -- | --
 HDD | Seagate IronWolf 12TB NAS HDD (ST12000VN0008) | 3 | 259.99
@@ -84,18 +84,20 @@ plenty, but over wifi I get a quarter of this bandwidth.
 I'm most likely going to park a DL workstation next to the
 NAS connected via ethernet network switch.
 
-## References for Setup + Inspiration
+### References for Setup + Inspiration
 - Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
 - Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
 
-# Deep Learning Workstation
+# Compute
+
+## Deep Learning Workstation
 
 - RTX 3090
 - 1x 1TB NVMe (980 Pro) + 2TB NVMe drive (970 Evo Plus)
 - Intel i7-13700KF (16-core)
 - arch btw
 
-## Specifications
+### Specifications
 Type | Name | Quantity | Price
 -- | -- | -- | --
 CPU | Intel Core i7-13700KF | 1 | 519.98
@@ -118,7 +120,7 @@ This is clearly not a cheap build, some high-level considerations that were made
 - `SSD` now that I know the `MOBO` came with an M.2 expansion card, I'm most likely going to invest in lots more of these NVMe drives (and give the OS it's own dedicated drives)
 - `RAM` leaving room to expand to 128 GB
 
-## Setup
+### Setup
 Trying to save some cash and running _arch btw_ is not easy. 
 
 1. **Software Compatibility**: The Asus ROG Strix Z690-E
@@ -139,7 +141,29 @@ don't have to check on the IP on every reboot.
 concept of how to use the display managers or window
 managers. Nothing like minimal install and `tmux` + `vim`
 
-## Resources
+### Configure bluetooth keyboard ([wiki](https://wiki.archlinux.org/title/bluetooth))
+
+- Install `bluez` + `bluez-utils` packages
+- check service
+  - `systemctl status bluetoothctl`
+  - `systemctl start bluetoothctl`
+- scan for device
+  - `bluetoothctl scan on` 
+- connect device
+  - `bluetoothctl connect <MAC_ADDRESS>`
+  - `bluetoothctl trust <MAC_ADDRESS>` (so that the passcode will show up when pairing)
+  - `bluetoothctl pair <MAC_ADDRESS>` (so that the passcode will show up when pairing)
+
+The device will be remembered, however my computer
+prevented me from booting up full without a keyboard
+connected.
+
+pro tip: 
+- connect via usb and turn scan on before entering pairing
+- exit pairing and copy device `MAC_ADDRESS`
+- trust device and start pairing on machine before
+entering pairing mode on keyboard
+
 ### Setting up ssh ([wiki](https://wiki.archlinux.org/title/OpenSSH))
 - check relevant service
   - `systemctl status sshd`
@@ -158,6 +182,7 @@ managers. Nothing like minimal install and `tmux` + `vim`
   - `sudo vim /etc/systemd/network/20-ethernet.network`
 - restart service
   - `systemctl restart systemd-networkd`
+
 # TODO
 
 - increase utilization on these machines
