@@ -9,6 +9,11 @@ _Mom: no, we have navi at home_
 
 ![serialexperimentslain1](https://github.com/hitorilabs/navi/assets/131238467/fbb66c0e-b6b3-4eb8-b9c4-365544ef1b72)
 
+# User Guide
+Github actually has a decent reading experience with markdown, the "happy path" for reading this like a blog is to click the `README.md` file to enter "code preview" and then hit the side menu button to pop out the table of contents.
+
+<img width="1444" alt="screenshot of markdown reader" src="https://github.com/hitorilabs/navi/assets/131238467/907c5cd6-ca61-40b7-ae5d-c346e6b4d943">
+
 # Build Log
 
 #### 2023/05/08
