@@ -7,7 +7,7 @@ _can we have navi?_
 
 _Mom: no, we have navi at home_
 
----
+![serialexperimentslain1](https://github.com/hitorilabs/navi/assets/131238467/fbb66c0e-b6b3-4eb8-b9c4-365544ef1b72)
 
 # Storage
 
