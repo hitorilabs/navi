@@ -1,4 +1,15 @@
-# storage
+# navi at home
+
+The name of the game is FLOPs, VRAM, mass storage, and
+high-bandwidth networking.
+
+_can we have navi?_
+
+_Mom: no, we have navi at home_
+
+---
+
+# Storage
 
 I'm quite fond of my macbook air - I can't see myself
 interfacing with anything other than a laptop.
