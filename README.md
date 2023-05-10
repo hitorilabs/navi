@@ -23,6 +23,10 @@ Built and setup the the workstation over the weekend. For the record, I've never
   - moved all the overkill components from NAS to DL workstation
   - never touched networking before, so this was an
   enlightening experience
+
+<img width="680" alt="screencap of sensor readings" src="https://github.com/hitorilabs/navi/assets/131238467/7526978f-e598-408c-af01-43ed2c914cf6">
+<img width="680" alt="screencap of nvtop" src="https://github.com/hitorilabs/navi/assets/131238467/782ee187-08e9-4668-bfdd-013975e7d5ca">
+
 #### 2023/05/01
 
 I should just buy the machine already, I'm not completely broke. Looking through local marketplaces for honest people selling used 3090. Doing my research on all things hardware.
