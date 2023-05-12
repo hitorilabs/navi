@@ -16,6 +16,18 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 # Build Log
 
+#### 2023/05/11
+
+bros... I am hearing colors now
+
+- workstation w/ cuda
+- network attached storage + rsync
+- vs code w/ `copilot` + `remote - ssh plugin` + `jupyter notebooks` extension
+- `htop` + `nvtop` monitoring on my TV screen
+- arch btw
+
+it's over -> we're back -> we're connected
+
 #### 2023/05/08
 
 Built and setup the the workstation over the weekend. For the record, I've never owned a GPU before and my only interaction with linux distros is through docker images on the cloud.
@@ -194,15 +206,13 @@ managers. Nothing like minimal install and `tmux` + `vim`
   - `bluetoothctl trust <MAC_ADDRESS>` (so that the passcode will show up when pairing)
   - `bluetoothctl pair <MAC_ADDRESS>` (so that the passcode will show up when pairing)
 
-The device will be remembered, however my computer
-prevented me from booting up full without a keyboard
-connected.
-
 pro tip: 
 - connect via usb and turn scan on before entering pairing
 - exit pairing and copy device `MAC_ADDRESS`
 - trust device and start pairing on machine before
 entering pairing mode on keyboard
+- when rebooting the computer, you might get stuck on "no keyboard detected"
+  - if your bluetooth keyboard has multiple pairing options (HHKB btw) you can cycle the pairing on/off to make it detect the keyboard.
 
 ### Setting up ssh ([wiki](https://wiki.archlinux.org/title/OpenSSH))
 - check relevant service
