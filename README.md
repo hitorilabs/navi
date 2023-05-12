@@ -28,6 +28,10 @@ bros... I am hearing colors now
 
 it's over -> we're back -> we're connected
 
+<img width="900" alt="screencap gif of sensor readings + nvtop + htop" src="https://github.com/hitorilabs/navi/assets/131238467/25037ab6-b8d6-40db-a393-7d6f208649cb">
+
+(and figured out how to resize panes in tmux)
+
 #### 2023/05/08
 
 Built and setup the the workstation over the weekend. For the record, I've never owned a GPU before and my only interaction with linux distros is through docker images on the cloud.
@@ -35,9 +39,6 @@ Built and setup the the workstation over the weekend. For the record, I've never
   - moved all the overkill components from NAS to DL workstation
   - never touched networking before, so this was an
   enlightening experience
-
-<img width="680" alt="screencap of sensor readings" src="https://github.com/hitorilabs/navi/assets/131238467/7526978f-e598-408c-af01-43ed2c914cf6">
-<img width="680" alt="screencap of nvtop" src="https://github.com/hitorilabs/navi/assets/131238467/782ee187-08e9-4668-bfdd-013975e7d5ca">
 
 #### 2023/05/01
 
