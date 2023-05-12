@@ -28,7 +28,7 @@ bros... I am hearing colors now
 
 it's over -> we're back -> we're connected
 
-<img width="900" alt="screencap gif of sensor readings + nvtop + htop" src="https://github.com/hitorilabs/navi/assets/131238467/25037ab6-b8d6-40db-a393-7d6f208649cb">
+<img width="900" alt="screencap gif of sensor readings + nvtop + htop" src="https://github.com/hitorilabs/navi/assets/131238467/984d8b8c-5b45-4f77-a034-ee0075cfbdd4">
 
 (and figured out how to resize panes in tmux)
 
