@@ -24,6 +24,9 @@ I accidentally wiped my root partition and realized what I need is stability. I 
 
 ubuntu-server had a pretty straightforward install and sensible defaults (launch sshd without login, netplan is pretty straight forward, etc.)
 
+- with tailscale + ubuntu, I can now connect to my DL workstation anywhere and safely reboot it without losing ssh access (unless something goes terribly wrong)
+- UX workflow is now pretty much uniform with `lambdalabs` instances
+
 #### 2023/05/11
 
 bros... I am hearing colors now
