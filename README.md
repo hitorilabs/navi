@@ -16,6 +16,14 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 # Build Log
 
+#### 2023/05/19
+
+ubuntu-server pilled now. 
+
+I accidentally wiped my root partition and realized what I need is stability. I want my server to be up all the time and feel roughly the same as a vm on `lambdalabs`. I was also trying to put tailscale on my arch linux install, but it was missing some mystery dependency that I'll never figure out.
+
+ubuntu-server had a pretty straightforward install and sensible defaults (launch sshd without login, netplan is pretty straight forward, etc.)
+
 #### 2023/05/11
 
 bros... I am hearing colors now
@@ -222,6 +230,7 @@ entering pairing mode on keyboard
   - `ip address show`
 - check restart service
   - `systemctl restart sshd`
+
 ### Configuring static IP using `systemd-networkd` ([wiki](https://wiki.archlinux.org/title/Systemd-networkd))
 - check state of ip addresses
   - `ip address show`
@@ -231,8 +240,26 @@ entering pairing mode on keyboard
   - `systemctl status systemd-networkd`
 - edit configuration (assuming wired ethernet)
   - `sudo vim /etc/systemd/network/20-ethernet.network`
+
+```
+[Network]
+DHCP=no
+Address=<ip_address_range>
+Gateway=<your_gateway>
+DNS=<some_dns_address>
+IPv6PrivacyExtensions=yes
+```
 - restart service
   - `systemctl restart systemd-networkd`
+
+### Mount Network Attached Storage (NFS)
+
+- `/etc/fstab` (filesystem table)
+```
+# <file system> <dir> <type> <options> <dump> <pass>
+
+<static_ip_address>:<path_to_dataset> <path_to_mount_location>  nfs  _netdev,noauto,x-systemd.automount,x-systemd.mount-timeout=10,timeo=14,x-systemd.idle-timeout=1min 0 0
+```
 
 # TODO
 
