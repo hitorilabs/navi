@@ -34,4 +34,7 @@ git
 tailscale
 ```
 
-This is pretty much all you need for a capable home workstation that you can access from anywhere.
+Notes:
+- make sure to `systemctl enable` your services (i.e. `sshd` and `tailscaled` so that they start on boot - this way you can easily remotely reboot your server)
+
+This is pretty much all you need for a capable home workstation that you can throw in your closet and access from anywhere.
