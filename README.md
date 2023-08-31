@@ -16,6 +16,32 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 # Build Log
 
+#### 2023/08/30
+
+recently secured a small pile of 3090s through the local social media marketplace and it's actually surprisingly hard to compose a system that's actually capable of running them all on a single machine.
+
+If only I had trusted the [lambdalabs article](https://lambdalabs.com/blog/deep-learning-hardware-deep-dive-rtx-30xx) to begin with, then I wouldn't have gone through countless hours of trying to get 4 3090s running on a single 1600W PSU. Basically, the sweet spot is 3 3090s running on a machine that's outfitted with server parts, since desktop parts will severely limit your total # of PCIE lanes (although you will rarely be memory constrained on multiple PCIE 4.0 x8 slots).
+
+If you are only planning to run 2x GPU configurations as a workstation, you should definitely settle for buying desktop parts and running them on PCIE 4.0 x8 (i.e. i9-13900K/i7-13700K both support 2x8 + 4 PCIE configurations, which leaves room for some weak networking or storage expansion). This way, you won't be dealing with used parts or old software.
+
+Type | Name | Quantity | Total Cost
+-- | -- | -- | --
+PSU | EVGA 1600W P+ | 1 | 551.42
+GPU | ASUS ROG STRIX RTX 3090 | 3 | 2,550.00
+MOBO | ROMED8-2T/BCM | 1 | 882.52
+RAM | Micron 16GB DDR4-3200 RDIMM 1Rx4 (MTA18ASF2G72PZ-3G2R) | 4 | 243.66
+STORAGE | WD_BLACK 1TB SN850X NVMe | 1 | 89.00
+COOLER | Noctua NH-U9 TR4-SP3 | 1 | 101.64
+CASE | Mining Rig Frame for 12GPU, Steel Open Air Miner | 1 | 45.19
+RISERS | Thermaltake TT PCI-E 4.0 Riser Cable | 3 | 338.55
+CPU | AMD EPYC 7302P 16 cores 3.0GHz 155W | 1 | 195.91
+
+**Total**: 4,997.89 CAD
+
+A neat article and chart on power limiting from a [Puget Systems article](https://www.pugetsystems.com/labs/hpc/NVIDIA-GPU-Power-Limit-vs-Performance-2296). This will help you control temperatures and stay comfortably under your power supply's maximum capacity.
+
+<img width="1444" alt="power limiting chart" src="/images/power_limit.jpeg">
+
 #### 2023/05/19
 
 ubuntu-server pilled now. 
@@ -113,7 +139,7 @@ Most importantly, I want to have some fun building a NAS.
 - Running TrueNAS Scale
 
 ### Specifications
-Type | Name | Quantity | Price
+Type | Name | Quantity | Total Cost
 -- | -- | -- | --
 HDD | Seagate IronWolf 12TB NAS HDD (ST12000VN0008) | 3 | 259.99
 CPU | Intel Core i5-11600K 6 Cores up to 4.9 GHz | 1 | 252.15
@@ -162,7 +188,7 @@ NAS connected via ethernet network switch.
 - arch btw
 
 ### Specifications
-Type | Name | Quantity | Price
+Type | Name | Quantity | Total Cost
 -- | -- | -- | --
 CPU | Intel Core i7-13700KF | 1 | 519.98
 COOL | Noctua NH-D15S | 1 | 99.95
