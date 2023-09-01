@@ -24,19 +24,31 @@ If only I had trusted the [lambdalabs article](https://lambdalabs.com/blog/deep-
 
 If you are only planning to run 2x GPU configurations as a workstation, you should definitely settle for buying desktop parts and running them on PCIE 4.0 x8 (i.e. i9-13900K/i7-13700K both support 2x8 + 4 PCIE configurations, which leaves room for some weak networking or storage expansion). This way, you won't be dealing with used parts or old software.
 
-Type | Name | Quantity | Total Cost
+Type | Name | Quantity | Unit Cost
 -- | -- | -- | --
 PSU | EVGA 1600W P+ | 1 | 551.42
-GPU | ASUS ROG STRIX RTX 3090 | 3 | 2,550.00
+GPU | ASUS ROG STRIX RTX 3090 | 3 | 850.00
 MOBO | ROMED8-2T/BCM | 1 | 882.52
-RAM | Micron 16GB DDR4-3200 RDIMM 1Rx4 (MTA18ASF2G72PZ-3G2R) | 4 | 243.66
+RAM | Micron 16GB DDR4-3200 RDIMM 1Rx4 (MTA18ASF2G72PZ-3G2R) | 4 | 60.915
 STORAGE | WD_BLACK 1TB SN850X NVMe | 1 | 89.00
 COOLER | Noctua NH-U9 TR4-SP3 | 1 | 101.64
 CASE | Mining Rig Frame for 12GPU, Steel Open Air Miner | 1 | 45.19
-RISERS | Thermaltake TT PCI-E 4.0 Riser Cable | 3 | 338.55
+RISERS | Thermaltake TT PCI-E 4.0 Riser Cable | 3 | 112.85
 CPU | AMD EPYC 7302P 16 cores 3.0GHz 155W | 1 | 195.91
 
 **Total**: 4,997.89 CAD
+
+Review on pricing:
+- RAM - $60 for a single 16GB stick is robbery, but I couldn't find any 1Rx4 memory on ebay
+- RISERS - with one-day delivery on Amazon
+- MOBO - got lots of recommendations for this and saw a lot of vast.ai builds that use it
+  - bought from ebay at ~$300 off from the Amazon price
+  - main advantage is that you get 7 slots with full PCIE 4.0 x16 bandwidth
+- STORAGE - pretty smol, but >100MB transfer between my other machines is pretty solid
+- GPU - a steal considering that the sellers were a very well-off family w/ kids who were probably not thrashing these cards
+- CPU - a piece of crap, but I've never dealt with server parts before so I'm starting small. 
+  - The ebay guys are surprisingly reliable, I wonder where they get these parts from 🤔
+  - I also bought a torque driver that has the 14 lbs/in setting because I saw some comments about it on discord, but it might just be a psyop.
 
 A neat article and chart on power limiting from a [Puget Systems article](https://www.pugetsystems.com/labs/hpc/NVIDIA-GPU-Power-Limit-vs-Performance-2296). This will help you control temperatures and stay comfortably under your power supply's maximum capacity.
 
@@ -139,7 +151,7 @@ Most importantly, I want to have some fun building a NAS.
 - Running TrueNAS Scale
 
 ### Specifications
-Type | Name | Quantity | Total Cost
+Type | Name | Quantity | Unit Cost
 -- | -- | -- | --
 HDD | Seagate IronWolf 12TB NAS HDD (ST12000VN0008) | 3 | 259.99
 CPU | Intel Core i5-11600K 6 Cores up to 4.9 GHz | 1 | 252.15
@@ -188,7 +200,7 @@ NAS connected via ethernet network switch.
 - arch btw
 
 ### Specifications
-Type | Name | Quantity | Total Cost
+Type | Name | Quantity | Unit Cost
 -- | -- | -- | --
 CPU | Intel Core i7-13700KF | 1 | 519.98
 COOL | Noctua NH-D15S | 1 | 99.95
