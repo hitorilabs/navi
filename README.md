@@ -58,7 +58,7 @@ A neat article and chart on power limiting from a [Puget Systems article](https:
 
 ubuntu-server pilled now. 
 
-I accidentally wiped my root partition and realized what I need is stability. I want my server to be up all the time and feel roughly the same as a vm on `lambdalabs`. I was also trying to put tailscale on my arch linux install, but it was missing some mystery dependency that I'll never figure out.
+Accidentally wiped my root partition and realized what I need is stability. I want my server to be up all the time and feel roughly the same as a vm on `lambdalabs`. I was also trying to put tailscale on my arch linux install, but it was missing some mystery dependency that I'll never figure out.
 
 ubuntu-server had a pretty straightforward install and sensible defaults (launch sshd without login, netplan is pretty straight forward, etc.)
 
@@ -67,19 +67,13 @@ ubuntu-server had a pretty straightforward install and sensible defaults (launch
 
 #### 2023/05/11
 
-bros... I am hearing colors now
-
 - workstation w/ cuda
 - network attached storage + rsync
 - vs code w/ `copilot` + `remote - ssh plugin` + `jupyter notebooks` extension
 - `htop` + `nvtop` monitoring on my TV screen
 - arch btw
 
-it's over -> we're back -> we're connected
-
 <img width="900" alt="screencap gif of sensor readings + nvtop + htop" src="https://github.com/hitorilabs/navi/assets/131238467/984d8b8c-5b45-4f77-a034-ee0075cfbdd4">
-
-(and figured out how to resize panes in tmux)
 
 #### 2023/05/08
 
@@ -110,87 +104,6 @@ Finished building and setting up TrueNAS Scale over the weekend. Honestly, not s
 
 Waiting 2 hours for a dataset to finish downloading over wifi, 5 mins for every model to download over the internet... this is the last time I will suffer. 
   - Ordered a bunch of parts and HDDs from Amazon to build a NAS (one-day shipping and scheduled pickup for returns feel illegal)
-
-# Storage
-
-I'm quite fond of my macbook air - I can't see myself
-interfacing with anything other than a laptop.
-
-For this reason, it's going to be a bit complicated to
-think about how I'm going to deal with storage.
-
-This is not a budget build guide, we haven't been grinding
-normie work just to park the money in a bank.
-
-## Things to Consider
-
-It's a little embarrassing that I code for a living, but
-I'm not familiar with how to actually evaluate my options.
-
-- Portable External HDD
-- Home NAS
-
-I'm going to try both eventually, but first I'll be trying
-out the Portable External HDD from Amazon.
-
-## Portable External HDD
-
-I bought a [WD My Passport Ultra](https://www.westerndigital.com/en-ca/products/portable-drives/wd-my-passport-ultra-usb-c-hdd#WDBC3C0010BSL-WESN).
-
-This thing was cool at first, but it has a lot of flaws:
-- passively draining all my battery away (don't know why it would even do this)
-- it's supposed to have max bandwidth 5Gbps (625MB/s), but it was actually more like 2Gbps
-- data can't be accessed without the physical drive being plugged in
-
-Most importantly, I want to have some fun building a NAS.
-## Network Attached Storage (NAS)
-
-- 36TB of HDD storage
-- 1TB NVMe cache 
-- configured with `raidz1` 
-- Running TrueNAS Scale
-
-### Specifications
-Type | Name | Quantity | Unit Cost
--- | -- | -- | --
-HDD | Seagate IronWolf 12TB NAS HDD (ST12000VN0008) | 3 | 259.99
-CPU | Intel Core i5-11600K 6 Cores up to 4.9 GHz | 1 | 252.15
-RAM | Corsair Vengeance LPX 16 GB (2 x 8 GB) DDR4-3200 | 1 | 59.99
-PSU | Corsair RM750x 750W PSU | 1 | 149.99
-MOBO | MSI MPG Z590 GAMING PLUS | 1 | 204.99
-SSD | Samsung 970 EVO Plus 250GB NVMe M.2 (MZ-V7S250/AM) | 2 | 59.97
-CASE | Antec VSK4000E-U3_US | 1 | 94.55
-COOL | Noctua NH-D15 | 1 | 139.94
-
-**Total**: 1801.52 CAD
-
----
-
-Most of the cost is coming from the HDDs. To optimize this build for cost:
-1. downgrade `MOBO`, `COOL`, `PSU`
-2. source most parts locally
-
-Some high-level considerations that were made:
-- 3x `HDD` are enough to run RAIDz1 (ideally, I should have at least 4 to run RAIDz2)
-- `COOL` NH-D15 is a universally solid cooler, I move it into a more demanding build when appropriate
-- `CASE` has space for 5 drives (terrible case and somehow still ~$100)
-- `MOBO` supports 2.5GbE LAN (hard to get 10GbE in Canada, can add a network card to support this)
-- `RAM` not a big deal at the moment
-
-### Bandwidth over Wi-Fi
-Even though I did consider getting high-bandwidth
-ethernet, I didn't account for 802.11ax 1.2Gb/s (~150
-MB/s) per stream. I thought 2.5 GbE (312.5 MB/s) would be
-plenty, but over wifi I get a quarter of this bandwidth. 
-
-I'm most likely going to park a DL workstation next to the
-NAS connected via ethernet network switch.
-
-### References for Setup + Inspiration
-- Sentdex Home Lab - https://www.youtube.com/watch?v=CIQ20FWs478
-- Setting up TrueNAS Core - https://www.youtube.com/watch?v=nVRWpV2xyds&t=0s
-
-# Compute
 
 ## Deep Learning Workstation
 
