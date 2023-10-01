@@ -16,13 +16,17 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 # Build Log
 
+*These are not budget build guides, we haven't been grinding normie work just to park the money in a bank.*
+
 #### 2023/08/30
 
 recently secured a small pile of 3090s through the local social media marketplace and it's actually surprisingly hard to compose a system that's actually capable of running them all on a single machine.
 
+<img width="1444" alt="rig" src="/images/rig.jpeg">
+
 If only I had trusted the [lambdalabs article](https://lambdalabs.com/blog/deep-learning-hardware-deep-dive-rtx-30xx) to begin with, then I wouldn't have gone through countless hours of trying to get 4 3090s running on a single 1600W PSU. Basically, the sweet spot is 3 3090s running on a machine that's outfitted with server parts, since desktop parts will severely limit your total # of PCIE lanes (although you will rarely be memory constrained on multiple PCIE 4.0 x8 slots).
 
-If you are only planning to run 2x GPU configurations as a workstation, you should definitely settle for buying desktop parts and running them on PCIE 4.0 x8 (i.e. i9-13900K/i7-13700K both support 2x8 + 4 PCIE configurations, which leaves room for some weak networking or storage expansion). This way, you won't be dealing with used parts or old software.
+If you are only planning to run 2x GPU configurations as a workstation, you should consider settling for desktop parts and running them on PCIE 4.0 x8 (i.e. i9-13900K/i7-13700K both support 2x8 + 4 PCIE configurations, which leaves room for some weak networking or storage expansion). This way, you won't be dealing with used parts or old software.
 
 Type | Name | Quantity | Unit Cost
 -- | -- | -- | --
@@ -44,7 +48,7 @@ Review on pricing:
 - MOBO - got lots of recommendations for this and saw a lot of vast.ai builds that use it
   - bought from ebay at ~$300 off from the Amazon price
   - main advantage is that you get 7 slots with full PCIE 4.0 x16 bandwidth
-- STORAGE - pretty smol, but >100MB transfer between my other machines is pretty solid
+- STORAGE - pretty smol, but won't be needing a ton on this machine yet because I'll be offloading to other machines
 - GPU - a steal considering that the sellers were a very well-off family w/ kids who were probably not thrashing these cards
 - CPU - a piece of crap, but I've never dealt with server parts before so I'm starting small. 
   - The ebay guys are surprisingly reliable, I wonder where they get these parts from 🤔
@@ -86,7 +90,9 @@ Built and setup the the workstation over the weekend. For the record, I've never
 #### 2023/05/01
 
 I should just buy the machine already, I'm not completely broke. Looking through local marketplaces for honest people selling used 3090. Doing my research on all things hardware.
+
 #### 2023/04/20
+
 I have more than enough storage to dump everything I see in the foreseeable future, but no compute to make any of this productive. There are lots of gains to be made with solid networking and storage, but cloud computing platforms often don't offer much control there. I want to do a mix of inference and training, but none of the options make sense for me.
   - Lambda Labs never has any capacity available when I need it
     - For an A100, it costs `1.10 * 24 * 365 = 9636` to run an  inference server 24/7
@@ -100,6 +106,7 @@ I have more than enough storage to dump everything I see in the foreseeable futu
 Finished building and setting up TrueNAS Scale over the weekend. Honestly, not super impressed with it. 
   - RAID storage is a psyop
   - Could've just invested in a bunch of NVMe drives and deal with extra storage when the time actually comes.
+
 #### 2023/04/10
 
 Waiting 2 hours for a dataset to finish downloading over wifi, 5 mins for every model to download over the internet... this is the last time I will suffer. 
