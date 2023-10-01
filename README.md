@@ -18,6 +18,14 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 *These are not budget build guides, we haven't been grinding normie work just to park the money in a bank.*
 
+#### 2023/09/30
+
+**NAS Update**: Basically deleted my NAS machine and transplanted all the drives into my primary workstation and setup a regular ZFS pool + NFS server on ubuntu (pleasantly surprised that all the data is retained and it just works). I was watching a bunch of yt videos and was tricked into thinking truenas was any good.
+
+**Workstation Update**: Managed to get a 4090 so I swapped out the 3090 and cobbled together remaining parts for my sister to do blender + game dev. Anything that fits on the single card can often feel nearly 2x faster - probably a combination of higher clock + cores + software gains on ada 
+
+Haven't played a game in a while, but of course I had to play cyberpunk on it - incredible. I was only vaguely keeping track of progress on the gaming/graphics side of things, but DLSS 3.5 w/ Path Tracing + Ray Reconstruction has to be pretty close to magic.
+
 #### 2023/08/30
 
 recently secured a small pile of 3090s through the local social media marketplace and it's actually surprisingly hard to compose a system that's actually capable of running them all on a single machine.
