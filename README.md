@@ -18,6 +18,30 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 *These are not budget build guides, we haven't been grinding normie work just to park the money in a bank.*
 
+#### 2023/11/10
+
+Attempted to go through the RMA process for some products just to see what it's like. The components are probably working fine, but I just cited some obscure conditions (i.e. power limited, coil whine, etc.). 
+
+EVGA - mostly no questions asked and were actually quite helpful with tech support. If you live far away from the actual repair center (RIP canada bros), you will get absolutely destroyed by shipping costs and conversion fees because they don't cover anything for you (unless maybe you gaslight them into offering it)
+
+ASUS - heard really bad things about them and I don't really want to risk them sending back my cards scratched up - or worse give me some used ones. I have an open RMA, but probably won't go through with it.
+
+**PSA** about PSUs, you should check what cables are actually provided in the box for compatibility. 
+
+I have the EVGA 1600W P+ PSU, but when I RMA'd it they gave me a P2 because it was out of stock at the time. The two PSUs are similar, but the P2 actually had a completely different set of cables that weren't at all compatible.
+
+My ROG STRIX 3090 model expects 3x 8-pin PCI-E single connections (`3 connectors * 3 GPUs = 9 Total`). The support guy helped me figure out that my cards were blinking red because 3090s don't work when using both ends of split cables - you have to use them as single connections and leave one end dangling. This also implies that **running 3 GPUs is effectively the maximum** on a single PSU.
+
+The EVGA 1600W P2 and P+ PSUs only have a total of 9 PCI-E power connector slots on the back
+- The P2 comes with 4x 8-pin single connectors and 5x split 6 pin + (6 + 2) pin. 
+- The P+ came with 4x 8-pin single connectors and 5x split 8 pin + (6 + 2) pin - so I could actually do the dangling cable thing and make it work.
+
+If I had to choose a PSU, I would've spent the extra cash to buy the T2 model because it has less of a coil whine and comes with the 9x 8-pin single PCI-e connectors that you'll want. 
+
+(see this [video](https://www.youtube.com/watch?v=V3OeKQU8AJE) about the T2 and explaining PSUs in general)
+
+You also can't even buy extra cables online - it seems like the single 8-pin PCI-E cables are always out of stock.
+
 #### 2023/09/30
 
 **NAS Update**: Basically deleted my NAS machine and transplanted all the drives into my primary workstation and setup a regular ZFS pool + NFS server on ubuntu (pleasantly surprised that all the data is retained and it just works). I was watching a bunch of yt videos and was tricked into thinking truenas was any good.
@@ -49,6 +73,8 @@ RISERS | Thermaltake TT PCI-E 4.0 Riser Cable | 3 | 112.85
 CPU | AMD EPYC 7302P 16 cores 3.0GHz 155W | 1 | 195.91
 
 **Total**: 4,997.89 CAD
+
+EDIT: DO NOT BUY THE P+ MODEL FOR YOUR PSU, BUY A T2 (SEE 2023/11/10)
 
 Review on pricing:
 - RAM - $60 for a single 16GB stick is robbery, but I couldn't find any 1Rx4 memory on ebay
