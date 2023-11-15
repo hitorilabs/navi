@@ -18,6 +18,10 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 *These are not budget build guides, we haven't been grinding normie work just to park the money in a bank.*
 
+#### 2023/11/15
+
+PSA if your boot is slow asf (ubuntu-server) for seemingly no reason, I wrote up a [gist](https://gist.github.com/hitorilabs/2ce6eabcf92ec7dd7acbcb72486aaf2e) about how having extra unmapped ports causes your machine will block your boot for several minutes to do a search.
+
 #### 2023/11/10
 
 Attempted to go through the RMA process for some products just to see what it's like. The components are probably working fine, but I just cited some obscure conditions (i.e. power limited, coil whine, etc.). 
