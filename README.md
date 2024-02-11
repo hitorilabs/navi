@@ -30,6 +30,20 @@ Related: [Article from PCI-SIG on Retimers](https://pcisig.com/pci-express®-ret
 
 I should try out some retimers, but I also don't know how much this impacts performance + system stability for now I can only really monitor the situation until I test them out for myself. So far the impact on performance itself hasn't been very noticeable, but the actual impact might be more insidious.
 
+I am also working on a more extensive strategy guide for buying, testing, and setting up this kind of hardware. There were just too many things would've been hard to figure out if I wasn't willing to burn some money away on niche experiments. 
+
+The good thing about buying a bunch of used crap is that you can actually mess up multiple times and still stay under budget. When you build your own workstation, you're basically just trying to "beat the market" which is basically:
+
+- Threadripper (>2.5K CAD)
+- Compatible MOBO (>1.3K CAD)
+- 2x A6000s (2 * >9K = >18K CAD)
+
+All-in cost you are spending upwards of 25K CAD after taxes - plus, you still had to do enough research to not completely mess up this moment. Even if you find a deal, you are forced to make some very expensive bets on hardware that you may not be familiar with yet.
+
+Some links to check out:
+- [Puget Systems Workstation Build](https://www.pugetsystems.com/solutions/scientific-computing-workstations/machine-learning-ai/buy-200/)
+- [Tim Dettemers Guide](https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/#Is_it_better_to_wait_for_future_GPUs_for_an_upgrade_The_future_of_GPUs)
+
 #### 2023/11/15
 
 PSA if your boot is slow asf (ubuntu-server) for seemingly no reason, I wrote up a [gist](https://gist.github.com/hitorilabs/2ce6eabcf92ec7dd7acbcb72486aaf2e) about how having extra unmapped ports causes your machine will block your boot for several minutes to do a search.
