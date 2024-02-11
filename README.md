@@ -18,6 +18,18 @@ Github actually has a decent reading experience with markdown, the "happy path" 
 
 *These are not budget build guides, we haven't been grinding normie work just to park the money in a bank.*
 
+#### 2024/02/11
+
+Just bought 1 more 3090 and another 1600W PSU (probably on it's last legs, but it was cheap so I want to play around with it) - now I'm noticing data link errors. Basically, you'll see messages like this when you watch the kernel diagnostic messages `sudo dmesg -w`.
+
+```
+[  143.474053] pcieport 0000:00:03.1:    [ 6] BadTLP                
+[  143.474055] pcieport 0000:00:03.1: AER: aer_layer=Data Link Layer, aer_agent=Receiver ID
+```
+Related: [Article from PCI-SIG on Retimers](https://pcisig.com/pci-express®-retimers-vs-redrivers-eye-popping-difference)
+
+I should try out some retimers, but I also don't know how much this impacts performance + system stability for now I can only really monitor the situation until I test them out for myself. So far the impact on performance itself hasn't been very noticeable, but the actual impact might be more insidious.
+
 #### 2023/11/15
 
 PSA if your boot is slow asf (ubuntu-server) for seemingly no reason, I wrote up a [gist](https://gist.github.com/hitorilabs/2ce6eabcf92ec7dd7acbcb72486aaf2e) about how having extra unmapped ports causes your machine will block your boot for several minutes to do a search.
@@ -132,7 +144,7 @@ Built and setup the the workstation over the weekend. For the record, I've never
 - Intel i7-13700KF (16-core)
 - arch btw
 
-### Specifications
+**Specifications**
 Type | Name | Quantity | Unit Cost
 -- | -- | -- | --
 CPU | Intel Core i7-13700KF | 1 | 519.98
